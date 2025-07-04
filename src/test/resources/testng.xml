@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SauceDemo_Automation_Suite" parallel="methods" thread-count="3" verbose="1">
+    
+    <parameter name="browser" value="chrome"/>
+    <parameter name="environment" value="qa"/>
+    
+    <listeners>
+        <listener class-name="com.saucedemo.listeners.ExtentReportListener"/>
+        <listener class-name="com.saucedemo.listeners.RetryListener"/>
+        <listener class-name="com.saucedemo.listeners.ScreenshotListener"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="Login_Tests">
+        <classes>
+            <class name="com.saucedemo.runners.LoginTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Product_Tests">
+        <classes>
+            <class name="com.saucedemo.runners.ProductTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Cart_Tests">
+        <classes>
+            <class name="com.saucedemo.runners.CartTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Checkout_Tests">
+        <classes>
+            <class name="com.saucedemo.runners.CheckoutTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Navigation_Tests">
+        <classes>
+            <class name="com.saucedemo.runners.NavigationTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="User_Role_Tests">
+        <classes>
+            <class name="com.saucedemo.runners.UserRoleTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Error_Validation_Tests">
+        <classes>
+            <class name="com.saucedemo.runners.ErrorValidationTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Sort_Filter_Tests">
+        <classes>
+            <class name="com.saucedemo.runners.SortFilterTestRunner"/>
+        </classes>
+    </test>
+
+</suite>
