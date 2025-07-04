@@ -1,0 +1,90 @@
+{
+  "valid_checkout_data": [
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "postalCode": "12345",
+      "description": "Standard valid data"
+    },
+    {
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "postalCode": "54321",
+      "description": "Alternative valid data"
+    },
+    {
+      "firstName": "Mike",
+      "lastName": "Johnson",
+      "postalCode": "98765",
+      "description": "Another valid combination"
+    }
+  ],
+  "invalid_checkout_data": [
+    {
+      "firstName": "",
+      "lastName": "Doe",
+      "postalCode": "12345",
+      "error_message": "Error: First Name is required",
+      "description": "Empty first name"
+    },
+    {
+      "firstName": "John",
+      "lastName": "",
+      "postalCode": "12345",
+      "error_message": "Error: Last Name is required",
+      "description": "Empty last name"
+    },
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "postalCode": "",
+      "error_message": "Error: Postal Code is required",
+      "description": "Empty postal code"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "postalCode": "",
+      "error_message": "Error: First Name is required",
+      "description": "All fields empty"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "postalCode": "12345",
+      "error_message": "Error: First Name is required",
+      "description": "First and last name empty"
+    },
+    {
+      "firstName": "",
+      "lastName": "Doe",
+      "postalCode": "",
+      "error_message": "Error: First Name is required",
+      "description": "First name and postal code empty"
+    },
+    {
+      "firstName": "John",
+      "lastName": "",
+      "postalCode": "",
+      "error_message": "Error: Last Name is required",
+      "description": "Last name and postal code empty"
+    }
+  ],
+  "checkout_flow": {
+    "payment_info": "SauceCard #31337",
+    "shipping_info": "Free Pony Express Delivery!",
+    "total_label": "Total: ",
+    "item_total_label": "Item total: ",
+    "tax_label": "Tax: ",
+    "tax_rate": 0.08,
+    "completion_title": "Checkout: Complete!",
+    "completion_header": "Thank you for your order!",
+    "completion_text": "Your order has been dispatched, and will arrive just as fast as the pony can get there!",
+    "back_home_button": "Back Home"
+  },
+  "navigation_buttons": {
+    "continue": "Continue",
+    "cancel": "Cancel",
+    "finish": "Finish"
+  }
+}
